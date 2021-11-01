@@ -1,0 +1,14 @@
+使用指令安裝adb和aapt
+apt-get install adb
+apt-get install aapt
+
+將zenbo連接電腦
+
+使用以下指令查看zenbo的device name
+adb devices
+
+執行指令
+adb -s [device name] tcpip 5555
+
+將連接zenbo和電腦的usb拔掉 然後執行以下指令
+adb connect [zenbo ip]:5555

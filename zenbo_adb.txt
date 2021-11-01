@@ -1,0 +1,13 @@
+adb -s H6RBCY001408 tcpip 5555
+adb connect 192.168.0.104
+
+
+adb -s 192.168.0.104 install app-debug.apk
+adb -s 192.168.0.101 shell monkey -p <packetage name> -c android.intent.category.LAUNCHER 1
+adb -s 192.168.0.104 shell am force-stop <packet name>
+adb -s 192.168.0.101 shell monkey -p com.example.screanon -c android.intent.category.LAUNCHER 1
+adb -s 192.168.0.104 shell pm uninstall -k <packet name>
+
+adb -s 192.168.0.104 shell am force-stop com.asus.zenbogotolocation
+
+adb -s 192.168.0.104 shell am kill all com.asus.zenbogotolocation

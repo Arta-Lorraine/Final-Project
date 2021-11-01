@@ -1,0 +1,83 @@
+adb kill-server
+
+adb start-server
+
+adb devices -l
+
+devices:
+adb devices
+
+tcpip:
+adb -s <devices name> tcpip 5555
+adb -s 91QEBNF22FA3 tcpip 5555
+zenbo:
+adb -s H6RBCY001408 tcpip 5555
+
+connect:
+adb connect <devices ip>
+adb connect 192.168.0.13
+zenbo:
+adb connect 192.168.0.104
+
+install:
+adb install <packet name>
+adb install biart.com.flashlight.apk
+
+adb -t <ID> install app-debug.apk
+adb -t 2 install app-debug.apk
+adb -t 5 install app-debug.apk
+
+zenbo:
+adb install RobotDevSample-debug.apk
+adb install -r RobotDevSample-debug.apk
+
+forfiles /m biart.com.flashlight.apk /c "cmd /c adb install @file"
+
+uninstall:
+adb -s <devices name> shell pm uninstall -k <packet name>
+
+adb shell pm uninstall -k biart.com.flashlight
+
+adb -s 192.168.0.110:5555 shell pm uninstall -k com.example.kai.myapplication
+
+zenbo:
+adb shell pm uninstall -k RobotDevSample-debug
+
+run:
+adb -s <devices name> shell monkey -p <packet name> -c android.intent.category.LAUNCHER 1
+
+adb shell monkey -p biart.com.flashlight -c android.intent.category.LAUNCHER 1
+
+adb -s 192.168.0.110:5555 shell monkey -p com.example.kai.myapplication -c android.intent.category.LAUNCHER 1
+
+stop:
+adb shell am force-stop <packet name>
+adb shell am force-stop biart.com.flashlight
+
+adb -s <devices name> shell am force-stop com.example.kai.myapplication
+
+aapt path:
+ANDROID_HOME
+D:\android-sdk-windows
+
+path
+D:\android-sdk-windows\build-tools\28.0.3
+D:\android-sdk-windows\platform-tools
+
+get packet name:
+aapt dump badging <path-to-apk>
+
+aapt dump badging screanon.apk
+aapt dump badging screanon.apk | find "package: name">file.txt
+
+
+
+adb -s 192.168.0.101 install -r RobotDevSample.apk
+adb -s 192.168.0.101 shell monkey -p com.asus.zenbodialogsample -c android.intent.category.LAUNCHER 1
+
+adb -s 192.168.0.101 shell monkey -p com.example.screanon -c android.intent.category.LAUNCHER 1
+
+adb -s 192.168.0.110 install -r RobotDevSample.apk
+adb -s 192.168.0.110 shell monkey -p com.asus.zenbodialogsample -c android.intent.category.LAUNCHER 1
+
+adb -s 192.168.0.110 shell monkey -p com.example.screanon -c android.intent.category.LAUNCHER 1

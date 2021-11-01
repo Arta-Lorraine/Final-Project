@@ -1,0 +1,15 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:2
+#EXT-X-MEDIA-SEQUENCE:123
+#EXTINF:1.251667,
+myvideostreaming123.ts
+#EXTINF:1.769022,
+myvideostreaming124.ts
+#EXTINF:0.884511,
+myvideostreaming125.ts
+#EXTINF:1.251667,
+myvideostreaming126.ts
+#EXTINF:1.201600,
+myvideostreaming127.ts
+#EXT-X-ENDLIST

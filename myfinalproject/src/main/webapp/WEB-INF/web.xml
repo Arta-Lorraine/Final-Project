@@ -1,0 +1,69 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+  	<servlet-name>HelloServlet</servlet-name>
+  	<display-name>HelloServlet</display-name>
+  	<description></description>
+  	<servlet-class>HelloServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>HelloServlet2</servlet-name>
+  	<display-name>HelloServlet2</display-name>
+  	<description></description>
+  	<servlet-class>HelloServlet2</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Uploader</servlet-name>
+  	<display-name>Uploader</display-name>
+  	<description></description>
+  	<servlet-class>Uploader</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MyLoginSystem</servlet-name>
+  	<display-name>MyLoginSystem</display-name>
+  	<description></description>
+  	<servlet-class>MyLoginSystem</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Stop</servlet-name>
+  	<display-name>Stop</display-name>
+  	<description></description>
+  	<servlet-class>Stop</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>mylogintest</servlet-name>
+  	<display-name>mylogintest</display-name>
+  	<description></description>
+  	<servlet-class>mylogintest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>HelloServlet</servlet-name>
+  	<url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>HelloServlet2</servlet-name>
+  	<url-pattern>/helloServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Uploader</servlet-name>
+  	<url-pattern>/uploader</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MyLoginSystem</servlet-name>
+  	<url-pattern>/mylogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Stop</servlet-name>
+  	<url-pattern>/Stop</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>mylogintest</servlet-name>
+  	<url-pattern>/mylogintest</url-pattern>
+  </servlet-mapping>
+
+</web-app>
